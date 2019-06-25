@@ -1,0 +1,95 @@
+body {
+	background: azure;
+	margin-top: 10px;
+	padding-top: 0;
+	
+}
+.title {
+	font-size: 70px;
+	
+}
+.subtitle{
+	font-size: 40px;
+	
+}
+.text{
+	font-size: 20px;
+}
+
+.wrapper {
+	width: 100%;
+	padding: 0px;
+	box-sizing: border-box;
+	text-align: letter-spacing: ;
+	display: flex;
+/*	background: yellow;*/
+
+	
+}
+
+.portrait {
+	width: 20%;
+	border-radius: 50%;
+	margin: 20px;
+	animation-name: portrait;
+	animation-duration: 6s;	
+	animation-fill-mode:forwards;
+
+		
+}
+.intro{
+	margin-left: 40px;
+	margin-top: -95px;
+	visibility: hidden;
+	animation-name: introduction;
+	animation-delay: 1s;
+	animation-duration: 3s;
+	width: 50%; 
+	animation-fill-mode:forwards;
+	align-self:flex-start;
+/*	background: blue;*/
+
+}
+@keyframes introduction{
+	from{
+		visibility: hidden;
+		transform: translateY(-200px)
+	}
+	
+	to{
+		visibility: visible;
+		transform: translateY(160px)
+	}
+}
+@keyframes portrait{
+	from{
+		transform: translateX(-400px)
+	}
+	to{
+		transform: translateX(300px)
+	}
+}
+
+.circle {
+	width: 10%;
+	padding: 50px 0;
+	line-height: 0;
+	background: pink;
+	color: white;
+	border-radius: 50px;
+	cursor: pointer;
+	transition: background 1s, transform 1s 1s ease-in;
+	text-align: center;
+	float: center;
+	display: inline-block;
+	/*	first number you specify is the transition and the second is the delay : what i am saying here is that the background will hire first for 1 second, and the second one will have a delay of 1s and then fire - so basicallly waits for the other one to finish */
+
+}
+
+.circle:hover {
+	background: salmon;
+	transform: rotate(360deg)
+}
+.get-info{
+	text-align: center;
+}
